@@ -3,7 +3,6 @@
     "type": "comment",
     "name": "question",
     "allowUsers": [
-      "AlohaJax",
       "cleidigh",
       "usernamehw",
       "gjsjohnmurray",
@@ -139,6 +138,14 @@
     ],
     "action": "updateLabels",
     "addLabel": "~needs more info"
+  },
+  {
+    "type": "label",
+    "name": "~needs more info (version)",
+    "action": "updateLabels",
+    "addLabel": "needs more info",
+    "removeLabel": "~needs more info (version)",
+    "comment": "Thanks for creating this issue! We figured it's missing some basic information, such as a version number, or in some other way doesn't follow our [issue reporting](https://aka.ms/vscodeissuereporting) guidelines. Please take the time to review these and update the issue.\n\nHappy Coding!"
   },
   {
     "type": "label",
