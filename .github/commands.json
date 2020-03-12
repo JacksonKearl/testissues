@@ -1,0 +1,39 @@
+[
+  {
+    "type": "comment",
+    "name": "needsMoreInfo",
+    "action": "updateLabels",
+    "addLabel": "~needs more info",
+    "removeLabel": "doesnt need more info"
+  },
+  {
+    "type": "comment",
+    "name": "desperatelyNeedsMoreInfo",
+    "action": "updateLabels",
+    "addLabel": "~needs more info",
+    "allowUsers": [
+      "AlohaJax"
+    ],
+    "removeLabel": "doesnt need more info"
+  },
+  {
+    "type": "comment",
+    "name": "close",
+    "action": "close",
+    "comment": "Closin!"
+  },
+  {
+    "type": "comment",
+    "name": "comment",
+    "action": "comment",
+    "comment": "Commentin!"
+  },
+  {
+    "type": "label",
+    "name": "~needs more info",
+    "action": "updateLabels",
+    "addLabel": "needs more info",
+    "removeLabel": "~needs more info",
+    "comment": "This needs more info!"
+  }
+]
