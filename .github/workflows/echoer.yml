@@ -1,18 +1,18 @@
-name: Echoer
-on:
-  issue_comment:
-    types: [created]
-  issues:
-    types: [opened,labeled]
+# name: Echoer
+# on:
+#   issue_comment:
+#     types: [created]
+#   issues:
+#     types: [opened,labeled]
 
-jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Actions
-        uses: actions/checkout@v2
-        with:
-          repository: 'JacksonKearl/vscode-triage-github-actions'
-          ref: master
-      - name: Run Echoer
-        uses: ./echoer
+# jobs:
+#   main:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Actions
+#         uses: actions/checkout@v2
+#         with:
+#           repository: 'JacksonKearl/vscode-triage-github-actions'
+#           ref: master
+#       - name: Run Echoer
+#         uses: ./echoer
