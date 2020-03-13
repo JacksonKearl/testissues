@@ -17,4 +17,4 @@ jobs:
         with:
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           label: new-release
-          days: 0.01
+          days: 5
