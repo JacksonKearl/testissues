@@ -1,7 +1,7 @@
 name: Needs More Info
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 jobs:
   main:
