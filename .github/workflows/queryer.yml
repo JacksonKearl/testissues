@@ -1,0 +1,16 @@
+name: Queryer
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions
+        uses: actions/checkout@v2
+        with:
+          repository: 'JacksonKearl/vscode-triage-github-actions'
+          ref: master
+      - name: Run Queryer
+        uses: ./queryer
