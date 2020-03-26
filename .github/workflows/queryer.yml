@@ -12,5 +12,5 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
-      - name: Run Queryer
-        uses: ./queryer
+#       - name: Run Queryer
+#         uses: ./queryer
