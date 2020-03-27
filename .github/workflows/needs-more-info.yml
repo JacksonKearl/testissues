@@ -19,4 +19,5 @@ jobs:
           matcher: '\b(\d\.\d{2,3}\.\d|insiders?|1\.\d\d\d?)\b'
           label: needs more info
           comment: this needs some more info plz
+          bots: vscode-triage-bot
           flag-team: you betcha
