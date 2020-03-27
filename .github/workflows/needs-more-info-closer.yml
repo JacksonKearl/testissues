@@ -1,5 +1,7 @@
 name: Needs More Info Closer
 on:
+  issues:
+    types: ['pinned']
   schedule:
     - cron: 30 * * * *
 
