@@ -19,4 +19,4 @@ jobs:
           label: new release
           labelColor: "006b75"
           labelDescription: Issues found in a recent release of VS Code
-          days: 5
+          days: 1
