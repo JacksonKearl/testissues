@@ -1,4 +1,4 @@
-name: Needs More Info
+name: Needs More Info Labeler
 on:
   issues:
     types: [opened, edited]
@@ -12,8 +12,8 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master # todo: change to tags once stabalized
-      - name: Run Needs More Info
-        uses: ./needs-more-info
+      - name: Run Needs More Info Labeler
+        uses: ./needs-more-info-labeler
         with:
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           matcher: '\b(\d\.\d{2,3}\.\d|insiders?|1\.\d\d\d?)\b'
