@@ -1,0 +1,16 @@
+name: Locker
+on:
+  schedule:
+    -cron: 0/5 * * * *
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions
+        uses: actions/checkout@v2
+        with:
+          repository: 'JacksonKearl/vscode-triage-github-actions'
+          ref: master
+       - name: Run Locker
+         uses: ./locker
