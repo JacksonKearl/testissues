@@ -3,7 +3,7 @@ on:
   issues:
     types: ['pinned']
   schedule:
-    - cron: 0/5 * * * *
+    - cron: 30 * * * *
 
 jobs:
   main:
