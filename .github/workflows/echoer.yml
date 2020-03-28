@@ -5,14 +5,14 @@ on: repository_dispatch
 #   issues:
 #     types: [opened, edited]
 
-# jobs:
-#   main:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout Actions
-#         uses: actions/checkout@v2
-#         with:
-#           repository: 'JacksonKearl/vscode-triage-github-actions'
-#           ref: master
-#       - name: Run Echoer
-#         uses: ./echoer
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions
+        uses: actions/checkout@v2
+        with:
+          repository: 'JacksonKearl/vscode-triage-github-actions'
+          ref: master
+      - name: Run Echoer
+        uses: ./echoer
