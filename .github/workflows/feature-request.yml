@@ -1,0 +1,32 @@
+name: Feature Request Manager
+on:
+  repository_dispatch:
+  schedule:
+    - cron: 30 * * * *
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions
+        uses: actions/checkout@v2
+        with:
+          repository: 'JacksonKearl/vscode-triage-github-actions'
+          ref: master
+      - name: Run Feature Request Manager
+        uses: ./feature-request
+        with:
+          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
+          candidateMilestoneID: 1
+          candidateMilestoneName: Backlog Candidates
+          backlogMilestoneID: 2
+          featureRequestLabel: feature-request
+          upvotesRequired: 1
+          numCommentsOverride: 5
+          initComment: New feature request
+          warnComment: This is getting old watch out there buddy
+          acceptComment: This is good shit welcome aboard
+          rejectComment: This is trash
+          warnDays: 0.0007
+          closeDays: 0.0014
+          milestoneDelaySeconds: 30
