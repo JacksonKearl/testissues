@@ -1,9 +1,9 @@
 name: Echoer
-on: repository_dispatch
-#   issue_comment:
-#     types: [created]
-#   issues:
-#     types: [opened, edited]
+on: 
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened, edited, labeled, milestoned]
 
 jobs:
   main:
