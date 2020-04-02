@@ -2,7 +2,7 @@ name: Feature Request Manager
 on:
   repository_dispatch:
   issues:
-    types: [labeled]
+    types: [labeled, milestoned]
   schedule:
     - cron: 30 * * * *
 
