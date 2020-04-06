@@ -19,5 +19,5 @@ jobs:
           label: needs more info
           closeDays: 0.0007
           closeComment: too little info bye
-          pingDays: 0.0070
-          pingComment: ${asignee} plz c ${author}'s comment k thx bie
+          pingDays: 0.0150
+          pingComment: ${assignee} plz c ${author}'s comment k thx bie
