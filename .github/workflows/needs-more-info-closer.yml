@@ -1,5 +1,6 @@
 name: Needs More Info Closer
 on:
+  repository_dispatch:
   issues:
     types: ['pinned']
   schedule:
