@@ -13,7 +13,7 @@ jobs:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
       - name: Install Actions
-        run: npm ci
+        run: npm install --production
       - name: Run New Release
         uses: ./new-release
         with:
