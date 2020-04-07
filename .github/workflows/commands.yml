@@ -15,7 +15,7 @@ jobs:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
       - name: Install Actions
-        run: npm install --production
+        run: npm ci
       - name: Run Commands
         uses: ./commands
         with:

@@ -15,6 +15,6 @@ jobs:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
       - name: Install Actions
-        run: npm install --production
+        run: npm ci
       - name: Run Echoer
         uses: ./echoer
