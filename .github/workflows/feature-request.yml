@@ -15,6 +15,8 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
+      - name: Install Actions
+        run: npm install --production
       - name: Run Feature Request Manager
         uses: ./feature-request
         with:

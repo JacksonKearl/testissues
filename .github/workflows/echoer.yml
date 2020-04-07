@@ -1,5 +1,5 @@
 name: Echoer
-on: 
+on:
   issue_comment:
     types: [created]
   issues:
@@ -14,5 +14,7 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
+      - name: Install Actions
+        run: npm install --production
       - name: Run Echoer
         uses: ./echoer

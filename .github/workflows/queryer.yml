@@ -12,5 +12,7 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
+      - name: Install Actions
+        run: npm install --production
       - name: Run Queryer
         uses: ./queryer

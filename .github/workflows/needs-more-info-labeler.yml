@@ -12,6 +12,8 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master # todo: change to tags once stabalized
+      - name: Install Actions
+        run: npm install --production
       - name: Run Needs More Info Labeler
         uses: ./needs-more-info-labeler
         with:

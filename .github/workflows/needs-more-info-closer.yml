@@ -13,6 +13,8 @@ jobs:
         with:
           repository: 'JacksonKearl/vscode-triage-github-actions'
           ref: master
+      - name: Install Actions
+        run: npm install --production
       - name: Run Needs More Info Closer
         uses: ./needs-more-info-closer
         with:
