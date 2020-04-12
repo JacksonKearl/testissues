@@ -10,7 +10,7 @@ jobs:
       - name: Checkout Actions
         uses: actions/checkout@v2
         with:
-          repository: 'JacksonKearl/vscode-triage-github-actions'
+          repository: 'microsoft/vscode-github-triage-actions'
           ref: master
           path: ./actions
       - name: Install Actions
@@ -18,7 +18,7 @@ jobs:
       - name: Run English Please
         uses: ./actions/english-please
         with:
-          cognitiveServicesAPIKey: ${{secrets.AUZRE_TEXT_TRANSLATOR_KEY}}
+          cognitiveServicesAPIKey: ${{secrets.AZURE_TEXT_TRANSLATOR_KEY}}
           nonEnglishLabel: "*english-please"
           needsMoreInfoLabel: "needs more info"
           translatorRequestedLabelPrefix: "translation-required-"
