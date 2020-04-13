@@ -1,7 +1,7 @@
 name: English Please
 on:
   issues:
-    types: [labeled, edited, labeled]
+    types: [opened, edited, labeled]
 
 jobs:
   main:
