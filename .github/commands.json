@@ -123,6 +123,18 @@
   },
   {
     "type": "comment",
+    "name": "label",
+    "allowUsers": []
+  },
+  {
+    "type": "comment",
+    "name": "assign",
+    "allowUsers": [
+      "NotJacksonKearl"
+    ]
+  },
+  {
+    "type": "comment",
     "name": "needsMoreInfo",
     "allowUsers": [
       "cleidigh",
