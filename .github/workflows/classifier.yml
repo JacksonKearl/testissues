@@ -1,5 +1,8 @@
 name: Classifier
-on: repository_dispatch
+on:
+  schedule:
+    cron: 0,30 * * * *
+  repository_dispatch:
 
 jobs:
   main:
@@ -17,8 +20,9 @@ jobs:
       - name: "Run Classifier: Scraper"
         uses: ./actions/classifier/fetch-issues
         with:
-          from: 120
-          until: 30
+          # slightly overlapping to protect against issues slipping through the cracks if a run is delayed
+          from: 45
+          until: 5
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
