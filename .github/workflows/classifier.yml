@@ -1,4 +1,4 @@
-name: English Please
+name: Classifier
 on: repository_dispatch
 
 jobs:
