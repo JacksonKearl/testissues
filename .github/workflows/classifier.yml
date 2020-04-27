@@ -31,3 +31,6 @@ jobs:
         run: python ./actions/classifier/generate-labels/main.py
       - name: "Run Classifier: Labeler"
         uses: ./actions/classifier/apply-labels
+        with:
+          config-path: classifier
+          __createLabels: yep
