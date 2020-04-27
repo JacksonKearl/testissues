@@ -1,7 +1,7 @@
 name: Classifier
 on:
   schedule:
-    cron: 0,30 * * * *
+    - cron: 0,30 * * * *
   repository_dispatch:
 
 jobs:
