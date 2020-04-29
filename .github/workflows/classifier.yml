@@ -37,4 +37,5 @@ jobs:
         uses: ./actions/classifier/apply-labels
         with:
           config-path: classifier
+          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           __createLabels: yep
