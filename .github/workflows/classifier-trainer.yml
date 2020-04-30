@@ -1,4 +1,4 @@
-name: Classifier
+name: "Classifier: Trainer"
 on:
   repository_dispatch:
 
@@ -15,12 +15,11 @@ jobs:
           path: ./actions
       - name: Install Actions
         run: npm install --production --prefix ./actions
+      - name: Install Additional Dependencies
+        # Pulls in a bunch of other packages that arent needed for the rest of the actions
+        run: npm install @azure/storage-blob@12
       - name: "Run Classifier: Scraper"
-        uses: ./actions/classifier/apply/fetch-issues
-        with:
-          # slightly overlapping to protect against issues slipping through the cracks if a run is delayed
-          from: 10000
-          until: 5
+        uses: ./actions/classifier/train/fetch-issues
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
@@ -30,10 +29,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade numpy scipy scikit-learn joblib nltk
       - name: "Run Classifier: Generator"
-        run: python ./actions/classifier/apply/generate-labels/main.py
-      - name: "Run Classifier: Labeler"
-        uses: ./actions/classifier/apply/apply-labels
+        run: python ./actions/classifier/train/generate-models/generate.py
+      - name: "Run Classifier: Upload"
+        uses: ./actions/classifier/train/upload-models
         with:
-          config-path: classifier
-          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
-          __createLabels: yep
+          blobContainerName: classifier-models
+          blobStorageKey: ${{secrets.BLOB_STORAGE_CONNECTION_STRING}}
