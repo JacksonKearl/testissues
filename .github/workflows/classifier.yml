@@ -21,7 +21,7 @@ jobs:
         uses: ./actions/classifier/apply/fetch-issues
         with:
           # slightly overlapping to protect against issues slipping through the cracks if a run is delayed
-          from: 360
+          from: 10000
           until: 5
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
