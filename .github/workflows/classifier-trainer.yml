@@ -29,7 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade numpy scipy scikit-learn joblib nltk
       - name: "Run Classifier: Generator"
-        run: python ./actions/classifier/train/generate-models/generate.py
+        run: python ./actions/classifier/train/generate-models/generate.py category
       - name: "Run Classifier: Upload"
         uses: ./actions/classifier/train/upload-models
         with:
