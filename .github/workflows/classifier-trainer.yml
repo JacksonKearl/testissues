@@ -34,4 +34,4 @@ jobs:
         uses: ./actions/classifier/train/upload-models
         with:
           blobContainerName: classifier-models
-          blobStorageKey: ${{secrets.BLOB_STORAGE_CONNECTION_STRING}}
+          blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
