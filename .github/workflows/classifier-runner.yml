@@ -27,7 +27,7 @@ jobs:
           from: 4000
           until: 5
           blobContainerName: classifier-models
-          blobStorageKey: ${{secrets.BLOB_STORAGE_CONNECTION_STRING}}
+          blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
