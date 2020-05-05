@@ -1,7 +1,7 @@
 name: "Classifier: Runner"
 on:
-  # schedule:
-  #   - cron: 0,30 * * * *
+  schedule:
+    - cron: 0 0/6 * * *
   repository_dispatch:
 
 jobs:
@@ -24,8 +24,8 @@ jobs:
         uses: ./actions/classifier/apply/fetch-issues
         with:
           # slightly overlapping to protect against issues slipping through the cracks if a run is delayed
-          from: 4000
-          until: 5
+          from: 420
+          until: 10
           blobContainerName: classifier-models
           blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
       - name: Set up Python 3.7
