@@ -10,15 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Actions
+        if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'unreleased')
         uses: actions/checkout@v2
         with:
           repository: 'microsoft/vscode-github-triage-actions'
           ref: master
           lfs: true
           path: ./actions
+      - name: Checkout Repo
+        if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'unreleased')
+        uses: actions/checkout@v2
+        with:
+          path: ./repo
+          fetch-depth: 0
       - name: Install Actions
+        if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'unreleased')
         run: npm install --production --prefix ./actions
       - name: "Run Release Pipeline Labeler"
+        if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'unreleased')
         uses: ./actions/release-pipeline
         with:
           notYetReleasedLabel: unreleased
