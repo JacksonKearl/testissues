@@ -1,7 +1,7 @@
 name: "Release Pipeline Labeler"
 on:
   issues:
-    - closed
+     types: [closed]
   schedule:
     - cron: 0/5 * * * *
 
