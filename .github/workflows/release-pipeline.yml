@@ -1,0 +1,25 @@
+name: "Release Pipeline Labeler"
+on:
+  issues:
+    - closed
+  schedule:
+    - cron: 0/5 * * * *
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions
+        uses: actions/checkout@v2
+        with:
+          repository: 'microsoft/vscode-github-triage-actions'
+          ref: master
+          lfs: true
+          path: ./actions
+      - name: Install Actions
+        run: npm install --production --prefix ./actions
+      - name: "Run Release Pipeline Labeler"
+        uses: ./actions/release-pipeline
+        with:
+          notYetReleasedLabel: unreleased
+          insidersReleasedLabel: insiders-released
