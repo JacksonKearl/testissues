@@ -21,6 +21,7 @@ jobs:
         if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'unreleased')
         uses: actions/checkout@v2
         with:
+          repository: 'microsoft/vscode'
           path: ./repo
           fetch-depth: 0
       - name: Install Actions
