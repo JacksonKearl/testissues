@@ -23,7 +23,7 @@ jobs:
         uses: ./actions/classifier/apply/fetch-issues
         with:
           # slightly overlapping to protect against issues slipping through the cracks if a run is delayed
-          from: 45
+          from: 70
           until: 5
           blobContainerName: classifier-models
           blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
