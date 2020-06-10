@@ -177,6 +177,11 @@
     "addLabel": "a11ymas"
   },
   {
+    "type": "comment",
+    "name": "label",
+    "allowUsers": []
+  },
+  {
     "type": "label",
     "name": "*off-topic",
     "action": "close",
