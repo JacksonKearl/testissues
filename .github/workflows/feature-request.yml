@@ -20,6 +20,7 @@ jobs:
       - name: Run Feature Request Manager
         uses: ./feature-request
         with:
+          appInsightsKey: ${{secrets.TRIAGE_ACTIONS_APP_INSIGHTS}}
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           candidateMilestoneID: 1
           candidateMilestoneName: Backlog Candidates

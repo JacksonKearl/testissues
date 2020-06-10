@@ -28,5 +28,6 @@ jobs:
       - name: "Run Release Pipeline Labeler"
         uses: ./actions/release-pipeline
         with:
+          appInsightsKey: ${{secrets.TRIAGE_ACTIONS_APP_INSIGHTS}}
           notYetReleasedLabel: unreleased
           insidersReleasedLabel: insiders-released
