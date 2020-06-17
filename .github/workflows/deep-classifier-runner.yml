@@ -1,7 +1,7 @@
 name: "Deep Classifier: Runner"
 on:
-  schedule:
-    - cron: 0 * * * *
+  # schedule:
+  #   - cron: 0 * * * *
   repository_dispatch:
     types: [trigger-deep-classifier-runner]
 
