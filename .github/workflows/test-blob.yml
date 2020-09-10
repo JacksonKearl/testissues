@@ -1,7 +1,7 @@
-name: Commands
+name: Test blob
 on:
-  issues:
-    types: [labeled]
+  issue_comment:
+    types: [created]
 
 jobs:
   main:
@@ -14,9 +14,9 @@ jobs:
           ref: master
       - name: Install Actions
         run: npm install --production
-      - name: Run Commands
-        uses: ./topic-subscribe
+      - name: Run Test blob
+        uses: ./blob-storage-test
         with:
           appInsightsKey: ${{secrets.TRIAGE_ACTIONS_APP_INSIGHTS}}
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
-          config-path: subscribers
+          blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}]
