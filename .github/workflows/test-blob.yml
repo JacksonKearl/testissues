@@ -15,7 +15,7 @@ jobs:
       - name: Install Actions
         run: npm install --production
       - name: Install Blob Stuff
-        run: npm install @azure/storage-blob@12.1.1
+        run: npm install @azure/core-http@1.1.7 @azure/storage-blob@12.1.1
       - name: Run Test blob
         uses: ./blob-storage-test
         with:
