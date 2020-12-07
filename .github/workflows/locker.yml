@@ -18,9 +18,9 @@ jobs:
       - name: Run Locker
         uses: ./actions/locker
         with:
-          daysSinceClose: 45
+          daysSinceClose: 0.0007
           appInsightsKey: ${{secrets.TRIAGE_ACTIONS_APP_INSIGHTS}}
-          daysSinceUpdate: 3
+          daysSinceUpdate: 0.0007
           ignoredLabel: "*out-of-scope"
           ignoreLabelUntil: "author-verification-requested"
           labelUntil: "verified"
