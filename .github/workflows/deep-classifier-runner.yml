@@ -4,6 +4,7 @@ on:
     - cron: 0 */3 * * *
   repository_dispatch:
     types: [trigger-deep-classifier-runner]
+  workflow_dispatch:
 
 jobs:
   main:
