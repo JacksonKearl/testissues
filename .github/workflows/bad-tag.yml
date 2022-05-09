@@ -5,6 +5,7 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    if: github.event.ref == 'bad-tag'
     steps:
       - name: Checkout Actions
         uses: actions/checkout@v2
