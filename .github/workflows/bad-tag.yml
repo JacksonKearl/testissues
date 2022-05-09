@@ -5,7 +5,7 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    if: github.event.ref == 'bad-tag'
+    if: github.event.ref == '1.999.0'
     steps:
       - name: Checkout Actions
         uses: actions/checkout@v2
@@ -19,4 +19,4 @@ jobs:
         uses: ./actions/tag-alert
         with:
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
-          tag-name: bad-tag
+          tag-name: '1.999.0'
