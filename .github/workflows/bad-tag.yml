@@ -14,7 +14,7 @@ jobs:
           path: ./actions
       - name: Install Actions
         run: npm install --production --prefix ./actions
-      - name: Run Author Verified
+      - name: Run Bad Tag
         uses: ./actions/tag-alert
         with:
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
