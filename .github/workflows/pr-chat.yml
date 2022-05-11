@@ -1,4 +1,4 @@
-name: Bad Tag
+name: Code Review Chat
 on:
   pull_request:
     types: [opened, ready_for_review]
